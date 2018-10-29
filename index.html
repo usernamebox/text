@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+	<body>
+		   
+		   
+		    <abbr></abbr>
+		    <ruby>淼<rt>miao</rt></ruby>
+		 <form>
+		   <input type="text" id="text1"/>
+		   <input type="submit" value="开始测试"  id="submit1" required/>
+		</form>
+		
+		
+		<script type="text/javascript">
+			
+			document.getElementById("submit1").addEventListener("click",function(){
+				var text1=document.getElementById("text1")
+				if (text1.validity.valueMissing)
+				{
+					
+					text1.setCustomValidity("不能输入敏感词")
+				}else{
+					text1.setCustomValidity("")
+				}
+			},false)
+		</script>
+		
+
+			
+		
+<!--//			var oText = document.getElementById("text")
+//			oText.addEventListener("invalid",fn,false)
+//			oText.oninput=function(){
+//				if(this.value=="反动派"){
+//					 this.setCustomValidity("请不要输入敏感词语")
+//					
+//				}else{
+//					this.setCustomValidity("")
+//				}
+//				function fn(){
+//					alert(this.validity.customError)
+//					ev.preventDefault()
+//				}
+//         function fn(){
+//				
+////				alert(this.validity.valid) 八种验证都满足，有一个不满足返回False
+//				
+////				alert(this.validity.valueMissing)  数据不为空 为空返回ture
+//
+////               alert(this.validity.typeMismatch)  输入数据与控件不匹配
+//                   
+//              alert(this.validity.patternMismatch)
+
+
+
+//				ev.preventDefault()
+//			}
+			-->
+	
+	</head>
+	</body>
+</html>
